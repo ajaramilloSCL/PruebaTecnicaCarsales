@@ -1,0 +1,19 @@
+    <div class="modal-header">
+      <h4 class="modal-title">Detalle de {{episodio.episode}} - {{episodio.name}}</h4>
+      <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+
+	<div *ngFor="let personaje of characters">
+		<img src='{{personaje.image}}' class="img-fluid" alt="{{personaje.name}}"><br>
+		<span class="small">Nombre: {{personaje.name}}</span><br>
+		<span class="small">Especie: {{personaje.species}}</span><br>
+		<span class="small">Género: {{personaje.gender}}</span><br>
+		<span class="small">Estado: {{personaje.status}}</span><br>
+		<span class="small">Origen: {{personaje.origin.name}}</span><br>
+		<hr>
+	</div>
+
+    </div>

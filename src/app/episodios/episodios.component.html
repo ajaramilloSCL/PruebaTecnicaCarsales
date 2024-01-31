@@ -1,0 +1,25 @@
+
+
+<div class="container">
+
+<p>Aplicación de ejercicio en Angular (adrian.jaramillo.s (arroba) outlook.com)</p>
+
+<div>
+  <button (click)="obtenerEpisodios()" class="btn btn-primary">Obtener episodios</button>
+</div>
+
+<hr>
+
+<div *ngIf="episodios.length > 0">
+  <h2>Lista de episodios:</h2>
+  <ul>
+    <li *ngFor="let episodio of episodios">
+      <b>{{episodio.episode}} - {{ episodio.name }}</b><br>
+      {{ episodio.air_date }}<br>
+        <a (click)="abrirModal(episodio.url)" style="cursor: pointer;" class="primary">Ver Detalle</a>
+	<hr>
+    </li>
+  </ul>
+</div>
+
+</div>
